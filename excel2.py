@@ -1,6 +1,7 @@
 import csv
 import pandas as pd 
 path = 'Medium_loading_2_Experiment_2.csv' #要匯入的csv檔案名稱
+print("以上需要注意改成自己電腦的路徑")
 with open(path, newline='') as csvfile:
   with open('after.csv', 'w', newline='') as f: #data為匯出的檔案名稱
     rows = csv.reader(csvfile)
@@ -20,3 +21,4 @@ data.drop(columns=['Sweep','Date','Time','Milliseconds'],inplace=True, axis=1)
 # data=data.columns
 # print(data)
 data.to_csv("after.csv", header = False,index=False)
+
